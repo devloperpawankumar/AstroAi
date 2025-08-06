@@ -20,7 +20,10 @@ const Signup = () => {
   const handleSignup = async () => {
     setLoading(true);
     try {
-      const res = await axios.post(`${api}/auth/signup`, { email });
+   const res = await axios.post(`${api}/auth/signup`, 
+  { email },
+  { withCredentials: true }
+);
 
       // Store token in localStorage (or cookies if preferred)
       localStorage.setItem("token", res.data.token);
