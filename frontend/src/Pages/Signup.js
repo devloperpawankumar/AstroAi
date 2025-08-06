@@ -22,8 +22,7 @@ const Signup = () => {
     try {
  const res = await axios.post(
   `${api}/auth/signup`,   // ← this now goes to backend
-  { email },
-  { withCredentials: true }
+  { email }
 );
 
       // Store token in localStorage (or cookies if preferred)
