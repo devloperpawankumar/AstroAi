@@ -20,7 +20,8 @@ const Signup = () => {
   const handleSignup = async () => {
     setLoading(true);
     try {
-   const res = await axios.post(`${api}/auth/signup`, 
+ const res = await axios.post(
+  `${api}/auth/signup`,   // ← this now goes to backend
   { email },
   { withCredentials: true }
 );

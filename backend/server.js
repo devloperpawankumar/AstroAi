@@ -20,20 +20,18 @@ app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 
 
-const corsOptions = {
-  origin: "https://astronewai.vercel.app", // ✅ No trailing slash
-  methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
-  credentials: true,
-};
+app.use(cors({
+  origin: 'https://astronewai.vercel.app', // ✅ your frontend domain
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  credentials: true
+}));
 app.use(session({
   secret: "secret_key",
   resave: false,
   saveUninitialized: true
 }));
-app.use(cors(corsOptions));
 
-// ✅ Add this to explicitly handle OPTIONS requests:
-app.options("*", cors(corsOptions));
+
 app.use(passport.initialize());
 app.use(passport.session());
 
