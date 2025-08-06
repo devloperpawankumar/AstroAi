@@ -18,20 +18,22 @@ require("./passport")
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(
-  cors({
-    origin: "https://astronewai.vercel.app", // Replace with your frontend URL
-    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: true,
-  })
-);
+
+
+const corsOptions = {
+  origin: "https://astronewai.vercel.app", // ✅ No trailing slash
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+  credentials: true,
+};
 app.use(session({
   secret: "secret_key",
   resave: false,
   saveUninitialized: true
 }));
+app.use(cors(corsOptions));
 
+// ✅ Add this to explicitly handle OPTIONS requests:
+app.options("*", cors(corsOptions));
 app.use(passport.initialize());
 app.use(passport.session());
 
