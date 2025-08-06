@@ -1,0 +1,246 @@
+
+  
+  .login-container {
+    min-height: 100vh;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    /* background: url("/path-to-your-saturn-image.png") no-repeat top right; */
+    background-size: contain;
+    background-color: #1a1a1a;
+    position: relative;
+  }
+  
+  .login-card {
+    padding: 40px;
+    border-radius: 16px;
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); */
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .welcome-text {
+    font-size: 28px;
+    margin-bottom: 24px;
+    color: #fff;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+  }
+  
+  .form-group {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .floating-label input {
+    width: 100%;
+    padding: 16px 12px 12px 12px;
+    background: transparent;
+    border: 1px solid #666;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    outline: none;
+  }
+  
+  .floating-label label {
+    position: absolute;
+    top: 16px;
+    left: 12px;
+    background-color: transparent;
+    color: #ccc;
+    transition: 0.2s ease all;
+    padding: 0 4px;
+    pointer-events: none;
+  }
+  
+  .floating-label input:disabled + label,
+  .floating-label input:focus + label,
+  .floating-label input:not(:placeholder-shown):valid + label,
+  .floating-label input:valid + label {
+    top: -8px;
+    left: 10px;
+    font-size: 12px;
+    color: white;
+  }
+  
+  .password-field {
+    position: relative;
+  }
+  
+  .eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .forgot-password {
+    font-size: 12px;
+    text-align: right;
+    color: #ccc;
+    margin-top: -8px;
+  }
+  
+  .continue-button {
+    margin-top: 12px;
+    background-color: white;
+    color: black;
+    padding: 12px;
+    border: none;
+    border-radius: 999px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .continue-button:hover {
+    background-color: #e6e6e6;
+  }
+  
+  .signup-text {
+    font-size: 12px;
+    /* text-align: center; */
+    color: #aaa;
+  }
+  
+  .signup-link {
+    color: orange;
+    text-decoration: none;
+  }
+  
+  .divider {
+    margin: 30px 0;
+    text-align: center;
+    color: #fff;
+  }
+
+  .social-login-buttons{
+    margin-bottom: 40px;
+  }
+  
+  .social-login-buttons button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: black;
+    border: 1px solid #555;
+    color: white;
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .social-login-buttons img {
+    height: 16px;
+  }
+  
+  .footer-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    position: absolute;
+    bottom: 20px;
+    left: 44%;
+  }
+  
+  .footer-links a {
+    color: white;
+    /* text-decoration: none; */
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+
+
+  /* Tablet screens (up to 768px) */
+@media screen and (max-width: 768px) {
+    .login-card {
+      padding: 30px 20px;
+      max-width: 90%;
+    }
+  
+    .welcome-text {
+      font-size: 24px;
+    }
+  
+    .continue-button {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .social-login-buttons button {
+      padding: 12px;
+      font-size: 14px;
+    }
+  
+    .footer-links {
+      left: 35%;
+    }
+  }
+  
+  /* Mobile screens (up to 480px) */
+  @media screen and (max-width: 480px) {
+    .login-container {
+      padding: 20px;
+    }
+  
+    .login-card {
+      padding: 20px 16px;
+    }
+  
+    .welcome-text {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+  
+    .floating-label input {
+      padding: 14px 10px 10px 10px;
+      font-size: 14px;
+    }
+  
+    .floating-label label {
+      font-size: 13px;
+    }
+  
+    .forgot-password {
+      font-size: 11px;
+    }
+  
+    .continue-button {
+      padding: 10px;
+      font-size: 13px;
+    }
+  
+    .social-login-buttons button {
+      font-size: 13px;
+      padding: 12px;
+    }
+  
+    .signup-text {
+      font-size: 11px;
+    }
+  
+    .footer-links {
+      flex-direction: column;
+      gap: 5px;
+      font-size: 11px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  

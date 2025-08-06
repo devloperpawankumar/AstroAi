@@ -1,0 +1,183 @@
+.chart-container1 {
+  font-family: sans-serif;
+  width: 100%;
+}
+
+.chart-section {
+  background: black;
+  color: white;
+  padding: 40px 80px;
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.chart-info {
+  width: 48%;
+}
+
+.chart-info h2 {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.chart-info p {
+  font-size: 20px;
+  margin-bottom: 15px !important;
+}
+
+.highlight {
+  color: #f25df2;
+  font-weight: bold;
+}
+
+.chart-box {
+  text-align: center;
+  width: 48%;
+}
+
+.chart-box img {
+  max-width: 250px;
+  width: 100%;
+}
+
+.chart-label {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.horoscope-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 80px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.horoscope-text {
+  width: 55%;
+}
+
+.horoscope-text h2 {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.tabs {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.tabs span {
+  color: gray;
+  cursor: pointer;
+  padding: 4px 10px;
+  transition: all 0.2s ease;
+}
+
+.tabs .active {
+  color: black;
+  font-weight: bold;
+  border-bottom: 2px solid black;
+}
+
+.daily-text {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.horoscope-icon {
+  text-align: center;
+  width: 40%;
+}
+
+.horoscope-icon img {
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.horoscope-icon p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+
+/* --- RESPONSIVE STYLES --- */
+
+@media (max-width: 768px) {
+  .chart-section,
+  .horoscope-section {
+    padding: 30px 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .chart-info,
+  .chart-box,
+  .horoscope-text,
+  .horoscope-icon {
+    width: 100%;
+    text-align: center;
+  }
+
+  .chart-info h2 {
+    font-size: 36px;
+  }
+
+  .chart-info p {
+    font-size: 18px;
+  }
+
+  .horoscope-text h2 {
+    font-size: 22px;
+  }
+
+  .daily-text {
+    font-size: 14px;
+  }
+
+  .horoscope-icon img {
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chart-info h2 {
+    font-size: 28px;
+    margin-top:40px;
+  }
+
+  .chart-info p {
+    font-size: 16px;
+  }
+
+  .chart-box img {
+    max-width: 200px;
+  }
+
+  .tabs {
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .horoscope-text h2 {
+    font-size: 20px;
+  }
+
+  .horoscope-icon img {
+    width: 120px;
+  }
+
+  .horoscope-icon p {
+    font-size: 16px;
+  }
+  .horoscope-icon img{
+    margin-top: 20px;
+  }
+}
