@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: "https://astronewai.vercel.app/", // Replace with your frontend URL
+    origin: "https://astronewai.vercel.app", // Replace with your frontend URL
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
