@@ -1,4 +1,4 @@
-const api = "https://astroai-six.vercel.app/"
+const api = "http://localhost:5000/api"
 
 export default api
 
