@@ -28,7 +28,11 @@ app.use(cors({
 app.use(session({
   secret: "secret_key",
   resave: false,
-  saveUninitialized: true
+  saveUninitialized: true,
+   cookie: {
+    secure: true, // ✅ only over HTTPS
+    sameSite: 'none' // ✅ for cross-origin cookies
+  }
 }));
 
 
