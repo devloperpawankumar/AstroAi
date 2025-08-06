@@ -21,8 +21,13 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.use(cors({
-  origin: 'https://astronewai.vercel.app', // ✅ your frontend domain
+  origin: 'https://astronewai.vercel.app', // ✅ your frontend
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+  credentials: true
 }));
+
+
 app.use(session({
   secret: "secret_key",
   resave: false,
