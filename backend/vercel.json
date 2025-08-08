@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "/(.*)",
+      "src": "/server.js",
       "use": "@vercel/node"
     }
   ],
@@ -17,13 +17,7 @@
         "Access-Control-Allow-Headers": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
       }
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/"
-    }
-  ],
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist"
+  ]
+  
 }
+
